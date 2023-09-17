@@ -1,0 +1,125 @@
+header {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background: #ecf0f6;
+    & .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    & .branding {
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding: 5px 10px 5px 15px;
+        user-select: none;
+        cursor: pointer;
+        &:hover {
+            background: #F5F5F5;
+            color: #555555;
+        }
+        &:focus {
+            background: #F5F5F5;
+            color: #555555;
+        }
+
+        & span {
+            font-weight: normal;
+            font-size: .9rem;
+            padding: 5px;
+        }
+    }
+
+    & .main-menu {
+        padding: 10px;
+        & nav {
+            & ul {
+                & li {
+                    padding: 0 10px;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    & a {
+                        &:hover {
+                            color: #000000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-location {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.tools-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 50px;
+    & .tool-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+            background: #ecf0f6;
+            cursor: pointer;
+
+        }
+        &:focus {
+            background: #ecf0f6;
+            cursor: pointer;
+
+        }
+        &-logo {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.tool-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    padding: 30px;
+}
+
+.tool-content-markdowntohtml {
+    & textarea {
+        width: 50%;
+        height: 80%;
+        font-size: 1.5rem;
+        padding: 10px;
+        border: 1px solid #555555;
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .tool-content-markdowntohtml {
+        flex-direction: column;
+        & textarea {
+            width: 100%;
+        }
+    }
+}
